@@ -1,12 +1,202 @@
+$large: 1200px  // breakpoint
+
+// colours
+$Violet: hsl(257, 40%, 49%)
+$SoftMagenta: hsl(300, 69%, 71%)
+
+// fonts
+$regular: 400
+$semibold: 600
+
+%open-sans
+    font:
+        family: 'Open Sans', sans-serif
+        weight: $regular
+
+%poppins-regular
+    font:
+        family: 'Poppins', sans-serif
+        weight: $regular
+
+%poppins-semibold
+    font:
+        family: 'Poppins', sans-serif
+        weight: $semibold
+
+// image widths
+$img-logo-width-mobile: 24rem
+$img-logo-width-desktop: 20rem
+$img-mockups-width-mobile: 60rem
+$img-mockups-width-desktop: 70rem
+
 html
     font-size: 62.5%
 
 body
+    background:
+        color: $Violet
+        image: url("./images/bg-mobile.svg")
+        position: center top
+        size: cover
+    margin: 8rem
+    min-height: 100vh
+
+    @media screen and (min-width: $large)
+        background:
+            image: url("./images/bg-desktop.svg")
+            position: center center
+        margin: 6rem 8rem
+
+.cols-wrapper
+    align-items: center
+    display: flex
+    flex-direction: column
+    gap: 15rem
+    justify-content: flex-start
+
+    @media screen and (min-width: $large)
+        align-items: center
+        flex-direction: row
+        gap: 5rem
+        justify-content: center
+
+// .col-img
+
+.col-txt
+    width: $img-mockups-width-mobile
+
+    @media screen and (min-width: $large)
+        width: auto
+
+%img-block
+    display: block
+    height: auto
+
+%img-logo-structure
+    margin: 0 0 14rem
+
+    @media screen and (min-width: $large)
+        margin: 0 0 10rem
+        
+
+.img-logo
+    @extend %img-block
+    @extend %img-logo-structure
+    width: $img-logo-width-mobile
+
+    @media screen and (min-width: $large)
+        width: $img-logo-width-desktop
+
+%img-mockups-structure
     margin: 0
+
+.img-mockups
+    @extend %img-block
+    @extend %img-mockups-structure
+    width: $img-mockups-width-mobile
+
+    @media screen and (min-width: $large)
+        width: $img-mockups-width-desktop
+
+%headline-structure
+    line-height: 1.5
+    letter-spacing: 0
+    margin: 0 0 6rem
+    text-align: center
+
+    @media screen and (min-width: $large)
+        margin: 0 0 4rem
+        text-align: left
+
+
+.headline
+    @extend %poppins-semibold
+    @extend %headline-structure
+    color: white
+    font-size: 5rem
+
+    @media screen and (min-width: $large)
+        font-size: 3rem
+        
+
+%copy-structure
+    line-height: 1.5
+    letter-spacing: 0
+    margin: 0 0 6rem
+    text-align: center
+
+    @media screen and (min-width: $large)
+        margin: 0 0 2rem
+        text-align: left
+
+.copy
+    @extend %open-sans
+    @extend %copy-structure
+    color: white
+    font-size: 3rem
+
+    @media screen and (min-width: $large)
+        font-size: 2rem
+
+%btn-structure
+    display: block
+    margin: 0 auto 12rem
+    padding: 3rem 15rem
+
+    @media screen and (min-width: $large)
+        margin: 0
+        padding: 2rem 6rem
+
+.btn
+    @extend %poppins-regular
+    @extend %btn-structure
+    background-color: white
+    border-radius: 5rem
+    color: $Violet
+    font-size: 2rem
+
+.btn:hover
+    background-color: $SoftMagenta
+    color: white
+    cursor: pointer
+
+.socials-row
+    align-content: center
+    display: flex
+    flex-direction: row
+    gap: 2rem
+    justify-content: center
+
+    @media screen and (min-width: $large)
+        justify-content: flex-end
+        
+%socials-col-structure
+    align-items: center
+    display: flex
+    justify-content: center
+    padding: 1rem
+
+.socials-col
+    @extend %socials-col-structure
+    border: 0.1rem solid white
+    border-radius: 50%
+
+.socials-col:hover
+    border-color: $SoftMagenta
+    cursor: pointer
+
+.socials-icon
+    color: white
+    font-size: 3rem
+
+.socials-col:hover > .socials-icon
+    color: $SoftMagenta
 
 .attribution
     font-size: 11px
     text-align: center 
 
 .attribution a
-    color: hsl(228, 45%, 44%) 
+    color: hsl(228, 45%, 44%)
+
+// Development redefinition level

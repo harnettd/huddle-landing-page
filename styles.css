@@ -1,9 +1,207 @@
+.copy {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.headline {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
+  background-color: hsl(257, 40%, 49%);
+  background-image: url("./images/bg-mobile.svg");
+  background-position: center top;
+  background-size: cover;
+  margin: 8rem;
+  min-height: 100vh;
+}
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url("./images/bg-desktop.svg");
+    background-position: center center;
+    margin: 6rem 8rem;
+  }
+}
+
+.cols-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+  justify-content: flex-start;
+}
+@media screen and (min-width: 1200px) {
+  .cols-wrapper {
+    align-items: center;
+    flex-direction: row;
+    gap: 5rem;
+    justify-content: center;
+  }
+}
+
+.col-txt {
+  width: 60rem;
+}
+@media screen and (min-width: 1200px) {
+  .col-txt {
+    width: auto;
+  }
+}
+
+.img-mockups, .img-logo {
+  display: block;
+  height: auto;
+}
+
+.img-logo {
+  margin: 0 0 14rem;
+}
+@media screen and (min-width: 1200px) {
+  .img-logo {
+    margin: 0 0 10rem;
+  }
+}
+
+.img-logo {
+  width: 24rem;
+}
+@media screen and (min-width: 1200px) {
+  .img-logo {
+    width: 20rem;
+  }
+}
+
+.img-mockups {
   margin: 0;
+}
+
+.img-mockups {
+  width: 60rem;
+}
+@media screen and (min-width: 1200px) {
+  .img-mockups {
+    width: 70rem;
+  }
+}
+
+.headline {
+  line-height: 1.5;
+  letter-spacing: 0;
+  margin: 0 0 6rem;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .headline {
+    margin: 0 0 4rem;
+    text-align: left;
+  }
+}
+
+.headline {
+  color: white;
+  font-size: 5rem;
+}
+@media screen and (min-width: 1200px) {
+  .headline {
+    font-size: 3rem;
+  }
+}
+
+.copy {
+  line-height: 1.5;
+  letter-spacing: 0;
+  margin: 0 0 6rem;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .copy {
+    margin: 0 0 2rem;
+    text-align: left;
+  }
+}
+
+.copy {
+  color: white;
+  font-size: 3rem;
+}
+@media screen and (min-width: 1200px) {
+  .copy {
+    font-size: 2rem;
+  }
+}
+
+.btn {
+  display: block;
+  margin: 0 auto 12rem;
+  padding: 3rem 15rem;
+}
+@media screen and (min-width: 1200px) {
+  .btn {
+    margin: 0;
+    padding: 2rem 6rem;
+  }
+}
+
+.btn {
+  background-color: white;
+  border-radius: 5rem;
+  color: hsl(257, 40%, 49%);
+  font-size: 2rem;
+}
+
+.btn:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+  cursor: pointer;
+}
+
+.socials-row {
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .socials-row {
+    justify-content: flex-end;
+  }
+}
+
+.socials-col {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.socials-col {
+  border: 0.1rem solid white;
+  border-radius: 50%;
+}
+
+.socials-col:hover {
+  border-color: hsl(300, 69%, 71%);
+  cursor: pointer;
+}
+
+.socials-icon {
+  color: white;
+  font-size: 3rem;
+}
+
+.socials-col:hover > .socials-icon {
+  color: hsl(300, 69%, 71%);
 }
 
 .attribution {
