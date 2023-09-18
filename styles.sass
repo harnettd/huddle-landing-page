@@ -1,54 +1,53 @@
-$large: 1200px  // breakpoint
-
-// colours
-$Violet: hsl(257, 40%, 49%)
-$SoftMagenta: hsl(300, 69%, 71%)
-
-// fonts
-$regular: 400
-$semibold: 600
-
-%open-sans
-    font:
-        family: 'Open Sans', sans-serif
-        weight: $regular
-
-%poppins-regular
-    font:
-        family: 'Poppins', sans-serif
-        weight: $regular
-
-%poppins-semibold
-    font:
-        family: 'Poppins', sans-serif
-        weight: $semibold
-
-// image widths
-$img-logo-width-mobile: 26rem
-$img-logo-width-desktop: 21.5rem
-$img-mockups-width-mobile: 60.3rem
-$img-mockups-width-desktop: 70.9rem
-
 html
     font-size: 62.5%
 
 * > *
-    margin-top: 0
     box-sizing: border-box
+    margin-top: 0
+
+$large: 1200px  // breakpoint
+
+
+// colours
+
+$Violet: hsl(257, 40%, 49%)
+$SoftMagenta: hsl(300, 69%, 71%)
+
+
+// fonts
+
+$font-stack-primary: 'Poppins', sans-serif
+$font-stack-secondary: 'Open Sans', sans-serif
+$regular: 400
+$semibold: 600
+
+@mixin font($family, $weight)
+    font:
+        family: $family
+        weight: $weight
+
+%font-primary-regular
+    @include font($font-stack-primary, $regular)
+
+%font-primary-semibold
+    @include font($font-stack-primary, $semibold)
+
+%font-secondary-regular
+    @include font($font-stack-secondary, $regular)
+
 
 body
     background:
         color: $Violet
         // image: url("./images/bg-mobile.svg")
-        position: center top
-        size: cover
-    margin: 6.3rem 7.5rem 6.3rem 7.5rem
-    // min-height: 100vh
+        position: left top
+        size: 70rem 160rem
+    margin: 6.3rem 7.5rem
 
     @media screen and (min-width: $large)
         background:
-            image: url("./images/bg-desktop.svg")
-            position: center center
+            // image: url("./images/bg-desktop.svg")
+            size: 144rem 80rem
         margin: 5.3rem 8.2rem 5.3rem 7.3rem
 
 %img-block
@@ -56,10 +55,15 @@ body
     height: auto
 
 %img-logo-structure
-    margin: 0 0 12rem -0.8rem
+    margin-bottom: 12rem
+    margin-left: -.8rem
 
     @media screen and (min-width: $large)
-        margin: 0 0 8.7rem -0.3rem
+        margin-bottom: 8.7rem
+        margin-left: -.3rem
+
+$img-logo-width-mobile: 26rem
+$img-logo-width-desktop: 21.5rem
 
 .img-logo
     @extend %img-block
@@ -70,22 +74,24 @@ body
         width: $img-logo-width-desktop
 
 .container-flex
-    align-items: center
     display: flex
     flex-direction: column
-    gap: 11.9rem
     justify-content: flex-start
+    align-items: center
+    gap: 11.9rem
     margin-bottom: 1.6rem
 
     @media screen and (min-width: $large)
-        align-items: flex-start
         flex-direction: row
+        align-items: flex-start
         gap: 5.2rem
-        justify-content: flex-start
         margin-bottom: 2rem
 
 %img-mockups-structure
-    margin: 0
+    margin-bottom: 0
+
+$img-mockups-width-mobile: 60.3rem
+$img-mockups-width-desktop: 70.9rem
 
 .img-mockups
     @extend %img-block
@@ -103,18 +109,18 @@ body
 
 %headline-structure
     line-height: 1.55
-    letter-spacing: 0
-    margin: 0 0 2.5rem
+    margin-bottom: 2.5rem
     text-align: center
 
     @media screen and (min-width: $large)
         line-height: 1.51
-        margin: 4.3rem 0 2rem
+        margin-top: 4.3rem
+        margin-bottom: 2rem
         text-align: left
 
 .headline
-    @extend %poppins-semibold
     @extend %headline-structure
+    @extend %font-primary-semibold
     color: white
     font-size: 4.74rem
 
@@ -124,16 +130,16 @@ body
 %copy-structure
     line-height: 1.5
     letter-spacing: 0
-    margin: 0 0 4.7rem
+    margin-bottom: 4.7rem
     text-align: center
 
     @media screen and (min-width: $large)
-        margin: 0 0 2.4rem
+        margin-bottom: 2.4rem
         text-align: left
 
 .copy
-    @extend %open-sans
     @extend %copy-structure
+    @extend %font-secondary-regular
     color: white
     font-size: 3.2rem
 
@@ -143,57 +149,56 @@ body
 %btn-structure
     display: block
     margin: 0 auto 11rem
-    padding: 2.4rem 15.2rem 2rem 15.2rem
+    padding: 2.4rem 15.2rem 2rem
 
     @media screen and (min-width: $large)
         margin: 0
         padding: 1.5rem 6.5rem
 
 .btn
-    @extend %poppins-regular
     @extend %btn-structure
-    background-color: white
     border: none
     border-radius: 5rem
+    @extend %font-primary-regular
     color: $Violet
     font-size: 2.39rem
+    background-color: white
 
     @media screen and (min-width: $large)
         font-size: 1.75rem
 
 .btn:hover
-    background-color: $SoftMagenta
     color: white
     cursor: pointer
+    background-color: $SoftMagenta
 
 .socials-row
-    align-content: center
     display: flex
     flex-direction: row
-    gap: 1.9rem
     justify-content: center
+    align-content: center
+    gap: 1.9rem
 
     @media screen and (min-width: $large)
-        gap: 1.6rem
         justify-content: flex-end
-        margin-right: -0.2rem
+        gap: 1.6rem
+        margin-right: -.2rem
         
 %socials-col-structure
-    align-items: center
     display: flex
     justify-content: center
-    // padding: 1rem
-
-.socials-col
-    @extend %socials-col-structure
-    border: 0.2rem solid white
-    border-radius: 50%
+    align-items: center
     height: 5.7rem
     width: 5.7rem
 
     @media screen and (min-width: $large)
         height: 4rem
         width: 4rem
+
+.socials-col
+    @extend %socials-col-structure
+    border: .2rem solid white
+    border-radius: 50%
 
 .socials-col:hover
     border-color: $SoftMagenta
@@ -210,24 +215,23 @@ body
     color: $SoftMagenta
 
 .attribution
-    font-size: 11px
+    font-size: 1.1rem
     text-align: center 
 
 .attribution a
     color: hsl(228, 45%, 44%)
 
-
 // Development redefinition level
 
-body
-    background:
-        image: url("./design/mobile-design.jpg")
-        repeat: no-repeat
-        position: left top
-        size: 75rem 160rem
-    opacity: 1
+// body
+//     background:
+//         image: url("./design/mobile-design.jpg")
+//         repeat: no-repeat
+//         position: left top
+//         size: 75rem 160rem
+//     opacity: 1
 
-    @media screen and (min-width: $large)
-        background:
-            image: url("./design/desktop-design.jpg")
-            size: 144rem 80rem
+//     @media screen and (min-width: $large)
+//         background:
+//             image: url("./design/desktop-design.jpg")
+//             size: 144rem 80rem
