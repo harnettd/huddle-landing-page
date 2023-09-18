@@ -24,60 +24,42 @@ $semibold: 600
         weight: $semibold
 
 // image widths
-$img-logo-width-mobile: 24rem
-$img-logo-width-desktop: 20rem
-$img-mockups-width-mobile: 60rem
-$img-mockups-width-desktop: 70rem
+$img-logo-width-mobile: 26rem
+$img-logo-width-desktop: 21.5rem
+$img-mockups-width-mobile: 60.3rem
+$img-mockups-width-desktop: 70.9rem
 
 html
     font-size: 62.5%
 
+* > *
+    margin-top: 0
+    box-sizing: border-box
+
 body
     background:
         color: $Violet
-        image: url("./images/bg-mobile.svg")
+        // image: url("./images/bg-mobile.svg")
         position: center top
         size: cover
-    margin: 8rem
-    min-height: 100vh
+    margin: 6.3rem 7.5rem 6.3rem 7.5rem
+    // min-height: 100vh
 
     @media screen and (min-width: $large)
         background:
             image: url("./images/bg-desktop.svg")
             position: center center
-        margin: 6rem 8rem
-
-.cols-wrapper
-    align-items: center
-    display: flex
-    flex-direction: column
-    gap: 15rem
-    justify-content: flex-start
-
-    @media screen and (min-width: $large)
-        align-items: center
-        flex-direction: row
-        gap: 5rem
-        justify-content: center
-
-// .col-img
-
-.col-txt
-    width: $img-mockups-width-mobile
-
-    @media screen and (min-width: $large)
-        width: auto
+        margin: 5.3rem 8.2rem 5.3rem 7.3rem
 
 %img-block
     display: block
     height: auto
 
 %img-logo-structure
-    margin: 0 0 14rem
+    margin: 0 0 12rem -0.8rem
 
     @media screen and (min-width: $large)
-        margin: 0 0 10rem
-        
+        margin: 0 0 8.7rem -0.3rem
 
 .img-logo
     @extend %img-block
@@ -86,6 +68,21 @@ body
 
     @media screen and (min-width: $large)
         width: $img-logo-width-desktop
+
+.container-flex
+    align-items: center
+    display: flex
+    flex-direction: column
+    gap: 11.9rem
+    justify-content: flex-start
+    margin-bottom: 1.6rem
+
+    @media screen and (min-width: $large)
+        align-items: flex-start
+        flex-direction: row
+        gap: 5.2rem
+        justify-content: flex-start
+        margin-bottom: 2rem
 
 %img-mockups-structure
     margin: 0
@@ -98,62 +95,71 @@ body
     @media screen and (min-width: $large)
         width: $img-mockups-width-desktop
 
+.col-txt
+    width: $img-mockups-width-mobile
+
+    @media screen and (min-width: $large)
+        width: auto
+
 %headline-structure
-    line-height: 1.5
+    line-height: 1.55
     letter-spacing: 0
-    margin: 0 0 6rem
+    margin: 0 0 2.5rem
     text-align: center
 
     @media screen and (min-width: $large)
-        margin: 0 0 4rem
+        line-height: 1.51
+        margin: 4.3rem 0 2rem
         text-align: left
-
 
 .headline
     @extend %poppins-semibold
     @extend %headline-structure
     color: white
-    font-size: 5rem
+    font-size: 4.74rem
 
     @media screen and (min-width: $large)
-        font-size: 3rem
-        
+        font-size: 3.98rem
 
 %copy-structure
     line-height: 1.5
     letter-spacing: 0
-    margin: 0 0 6rem
+    margin: 0 0 4.7rem
     text-align: center
 
     @media screen and (min-width: $large)
-        margin: 0 0 2rem
+        margin: 0 0 2.4rem
         text-align: left
 
 .copy
     @extend %open-sans
     @extend %copy-structure
     color: white
-    font-size: 3rem
+    font-size: 3.2rem
 
     @media screen and (min-width: $large)
-        font-size: 2rem
+        font-size: 1.8rem
 
 %btn-structure
     display: block
-    margin: 0 auto 12rem
-    padding: 3rem 15rem
+    margin: 0 auto 11rem
+    padding: 2.4rem 15.2rem 2rem 15.2rem
 
     @media screen and (min-width: $large)
         margin: 0
-        padding: 2rem 6rem
+        padding: 1.5rem 6.5rem
 
 .btn
     @extend %poppins-regular
     @extend %btn-structure
     background-color: white
+    border: none
     border-radius: 5rem
     color: $Violet
-    font-size: 2rem
+    font-size: 2.39rem
+
+    @media screen and (min-width: $large)
+        font-size: 1.75rem
 
 .btn:hover
     background-color: $SoftMagenta
@@ -164,22 +170,30 @@ body
     align-content: center
     display: flex
     flex-direction: row
-    gap: 2rem
+    gap: 1.9rem
     justify-content: center
 
     @media screen and (min-width: $large)
+        gap: 1.6rem
         justify-content: flex-end
+        margin-right: -0.2rem
         
 %socials-col-structure
     align-items: center
     display: flex
     justify-content: center
-    padding: 1rem
+    // padding: 1rem
 
 .socials-col
     @extend %socials-col-structure
-    border: 0.1rem solid white
+    border: 0.2rem solid white
     border-radius: 50%
+    height: 5.7rem
+    width: 5.7rem
+
+    @media screen and (min-width: $large)
+        height: 4rem
+        width: 4rem
 
 .socials-col:hover
     border-color: $SoftMagenta
@@ -187,7 +201,10 @@ body
 
 .socials-icon
     color: white
-    font-size: 3rem
+    font-size: 2.8rem
+
+    @media screen and (min-width: $large)
+        font-size: 2rem
 
 .socials-col:hover > .socials-icon
     color: $SoftMagenta
@@ -199,4 +216,18 @@ body
 .attribution a
     color: hsl(228, 45%, 44%)
 
+
 // Development redefinition level
+
+body
+    background:
+        image: url("./design/mobile-design.jpg")
+        repeat: no-repeat
+        position: left top
+        size: 75rem 160rem
+    opacity: 1
+
+    @media screen and (min-width: $large)
+        background:
+            image: url("./design/desktop-design.jpg")
+            size: 144rem 80rem

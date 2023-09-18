@@ -17,44 +17,22 @@ html {
   font-size: 62.5%;
 }
 
+* > * {
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: hsl(257, 40%, 49%);
-  background-image: url("./images/bg-mobile.svg");
   background-position: center top;
   background-size: cover;
-  margin: 8rem;
-  min-height: 100vh;
+  margin: 6.3rem 7.5rem 6.3rem 7.5rem;
 }
 @media screen and (min-width: 1200px) {
   body {
     background-image: url("./images/bg-desktop.svg");
     background-position: center center;
-    margin: 6rem 8rem;
-  }
-}
-
-.cols-wrapper {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 15rem;
-  justify-content: flex-start;
-}
-@media screen and (min-width: 1200px) {
-  .cols-wrapper {
-    align-items: center;
-    flex-direction: row;
-    gap: 5rem;
-    justify-content: center;
-  }
-}
-
-.col-txt {
-  width: 60rem;
-}
-@media screen and (min-width: 1200px) {
-  .col-txt {
-    width: auto;
+    margin: 5.3rem 8.2rem 5.3rem 7.3rem;
   }
 }
 
@@ -64,20 +42,38 @@ body {
 }
 
 .img-logo {
-  margin: 0 0 14rem;
+  margin: 0 0 12rem -0.8rem;
 }
 @media screen and (min-width: 1200px) {
   .img-logo {
-    margin: 0 0 10rem;
+    margin: 0 0 8.7rem -0.3rem;
   }
 }
 
 .img-logo {
-  width: 24rem;
+  width: 26rem;
 }
 @media screen and (min-width: 1200px) {
   .img-logo {
-    width: 20rem;
+    width: 21.5rem;
+  }
+}
+
+.container-flex {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 11.9rem;
+  justify-content: flex-start;
+  margin-bottom: 1.6rem;
+}
+@media screen and (min-width: 1200px) {
+  .container-flex {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 5.2rem;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
   }
 }
 
@@ -86,77 +82,93 @@ body {
 }
 
 .img-mockups {
-  width: 60rem;
+  width: 60.3rem;
 }
 @media screen and (min-width: 1200px) {
   .img-mockups {
-    width: 70rem;
+    width: 70.9rem;
+  }
+}
+
+.col-txt {
+  width: 60.3rem;
+}
+@media screen and (min-width: 1200px) {
+  .col-txt {
+    width: auto;
   }
 }
 
 .headline {
-  line-height: 1.5;
+  line-height: 1.55;
   letter-spacing: 0;
-  margin: 0 0 6rem;
+  margin: 0 0 2.5rem;
   text-align: center;
 }
 @media screen and (min-width: 1200px) {
   .headline {
-    margin: 0 0 4rem;
+    line-height: 1.51;
+    margin: 4.3rem 0 2rem;
     text-align: left;
   }
 }
 
 .headline {
   color: white;
-  font-size: 5rem;
+  font-size: 4.74rem;
 }
 @media screen and (min-width: 1200px) {
   .headline {
-    font-size: 3rem;
+    font-size: 3.98rem;
   }
 }
 
 .copy {
   line-height: 1.5;
   letter-spacing: 0;
-  margin: 0 0 6rem;
+  margin: 0 0 4.7rem;
   text-align: center;
 }
 @media screen and (min-width: 1200px) {
   .copy {
-    margin: 0 0 2rem;
+    margin: 0 0 2.4rem;
     text-align: left;
   }
 }
 
 .copy {
   color: white;
-  font-size: 3rem;
+  font-size: 3.2rem;
 }
 @media screen and (min-width: 1200px) {
   .copy {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
 .btn {
   display: block;
-  margin: 0 auto 12rem;
-  padding: 3rem 15rem;
+  margin: 0 auto 11rem;
+  padding: 2.4rem 15.2rem 2rem 15.2rem;
 }
 @media screen and (min-width: 1200px) {
   .btn {
     margin: 0;
-    padding: 2rem 6rem;
+    padding: 1.5rem 6.5rem;
   }
 }
 
 .btn {
   background-color: white;
+  border: none;
   border-radius: 5rem;
   color: hsl(257, 40%, 49%);
-  font-size: 2rem;
+  font-size: 2.39rem;
+}
+@media screen and (min-width: 1200px) {
+  .btn {
+    font-size: 1.75rem;
+  }
 }
 
 .btn:hover {
@@ -169,12 +181,14 @@ body {
   align-content: center;
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 1.9rem;
   justify-content: center;
 }
 @media screen and (min-width: 1200px) {
   .socials-row {
+    gap: 1.6rem;
     justify-content: flex-end;
+    margin-right: -0.2rem;
   }
 }
 
@@ -182,12 +196,19 @@ body {
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 1rem;
 }
 
 .socials-col {
-  border: 0.1rem solid white;
+  border: 0.2rem solid white;
   border-radius: 50%;
+  height: 5.7rem;
+  width: 5.7rem;
+}
+@media screen and (min-width: 1200px) {
+  .socials-col {
+    height: 4rem;
+    width: 4rem;
+  }
 }
 
 .socials-col:hover {
@@ -197,7 +218,12 @@ body {
 
 .socials-icon {
   color: white;
-  font-size: 3rem;
+  font-size: 2.8rem;
+}
+@media screen and (min-width: 1200px) {
+  .socials-icon {
+    font-size: 2rem;
+  }
 }
 
 .socials-col:hover > .socials-icon {
@@ -211,6 +237,20 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-image: url("./design/mobile-design.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 75rem 160rem;
+  opacity: 1;
+}
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url("./design/desktop-design.jpg");
+    background-size: 144rem 80rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
