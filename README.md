@@ -6,7 +6,7 @@ This is a solution to the [Huddle landing page with single introductory section 
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -15,8 +15,6 @@ This is a solution to the [Huddle landing page with single introductory section 
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -27,85 +25,68 @@ Users should be able to:
 - View the optimal layout for the page depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-### Screenshot
+### Screenshots
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![screenshot-mobile1](./images/screenshot-mobile1.png) ![screenshot-mobile2](./images/screenshot-mobile2.png)
+![screenshot-desktop](./images/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/harnettd/huddle-landing-page](https://github.com/harnettd/huddle-landing-page)
+- Live Site URL: [https://harnettd.github.io/huddle-landing-page/](https://harnettd.github.io/huddle-landing-page/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- HTML5
+- CSS including Flexbox using the OOCSS methodology
+- Sass
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+In completing this project, I learned how to
 
-To see how you can add code snippets, see below:
+- use Sass on sass rather than scss files. Whereas scss files use semicolons to end statements
+and curly braces to demarcate code blocks, sass files uses ends of lines and indentation instead.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+- use Sass placeholder classes in conjunction with the `@extend` rule, i.e.,
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+%img-block
+    display: block
+    height: auto
+
+.img-logo
+    @extend %img-block
+    width: 26rem
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+- organize a sass file according the principles of OOCSS, in particular, separating structure 
+from style.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I'd like to get better at putting together responsive webpages. For example, I'd like to make better use of
+CSS properties like `min-width` and `max-width` rather than relying on a fixed `width`. 
+Also, I'd like to learn more about how best to handle background images in responsive web design.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [The Basics of Object-Oriented CSS (OOCSS)](https://www.hongkiat.com/blog/basics-of-object-oriented-css/) - From this webpage, I learned the 
+principles behind the OOCSS methodology. 
+- [OOCSS + Sass = The Best Way to Write CSS](https://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/) - This is an article discussing
+how to use placeholder classes and the `@extend` rule in Sass.
+- [Code Guide](https://codeguide.co/#css) - This is a CSS style-guide. In particular, it helped me decide how to order CSS declarations
+within a block.
+- [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - I got quite a bit better with Flexbox from 
+reading through this webpage.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Github - [Derek Harnett](https://github.com/harnettd)
+- Frontend Mentor - [@harnettd](https://www.frontendmentor.io/profile/harnettd)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+## Acknowledgements
 
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Thanks to [Frontend Mentor](https://www.frontendmentor.io/) for posting this challenge.
