@@ -1,5 +1,5 @@
 html
-    min-width: 753px
+    min-width: 750px
     min-height: 100vh
     font-size: 62.5%
 
@@ -48,8 +48,7 @@ body
     margin: 6.3rem 7.5rem
 
     @media screen and (min-width: $large)
-        background: size: cover
-            position: center center
+        background:
             image: url("./images/bg-desktop.svg")
             size: 131.8rem 80rem
             position-x: left
@@ -186,11 +185,13 @@ $img-mockups-width-desktop: 70.9rem
     justify-content: center
     align-content: center
     gap: 1.9rem
+    margin-bottom: 6.3rem
 
     @media screen and (min-width: $large)
         justify-content: flex-end
         gap: 1.6rem
         margin-right: -.2rem
+        margin-bottom: 5.3rem
         
 %socials-col-structure
     display: flex
